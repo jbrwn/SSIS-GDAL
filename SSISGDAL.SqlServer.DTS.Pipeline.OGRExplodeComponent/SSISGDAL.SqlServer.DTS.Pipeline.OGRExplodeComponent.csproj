@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2E0EAD22-1E4E-49A3-8146-DC70A37F273B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SSISGDAL.SqlServer.DTS.Pipeline</RootNamespace>
+    <AssemblyName>SSISGDAL.SqlServer.DTS.Pipeline.OGRExplodeComponent</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>..\SSISGDAL.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="gdal_csharp, Version=1.0.5170.15071, Culture=neutral, PublicKeyToken=db5a52b08dc5b321, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\GDAL\csharp\gdal_csharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.SqlServer.DTSPipelineWrap, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>..\..\..\..\..\..\..\..\Program Files (x86)\Microsoft SQL Server\110\SDK\Assemblies\Microsoft.SqlServer.DTSPipelineWrap.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SQLServer.DTSRuntimeWrap, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>..\..\..\..\..\..\..\..\Program Files (x86)\Microsoft SQL Server\110\SDK\Assemblies\Microsoft.SQLServer.DTSRuntimeWrap.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SQLServer.ManagedDTS, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\..\Program Files (x86)\Microsoft SQL Server\110\SDK\Assemblies\Microsoft.SQLServer.ManagedDTS.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.PipelineHost, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\..\Program Files (x86)\Microsoft SQL Server\110\SDK\Assemblies\Microsoft.SqlServer.PipelineHost.dll</HintPath>
+    </Reference>
+    <Reference Include="ogr_csharp, Version=1.0.5170.15071, Culture=neutral, PublicKeyToken=db5a52b08dc5b321, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\GDAL\csharp\ogr_csharp.dll</HintPath>
+    </Reference>
+    <Reference Include="osr_csharp, Version=1.0.5170.15069, Culture=neutral, PublicKeyToken=db5a52b08dc5b321, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\GDAL\csharp\osr_csharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="OGRExplodeComponent.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SSISGDAL.SqlServer.DTS.SSISGDAL\SSISGDAL.SqlServer.DTS.SSISGDAL.csproj">
+      <Project>{7BDBE2E9-E816-4297-A276-BE2A9A99044B}</Project>
+      <Name>SSISGDAL.SqlServer.DTS.SSISGDAL</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\SSISGDAL.snk">
+      <Link>SSISGDAL.snk</Link>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="..\SSISGDAL.ico">
+      <Link>SSISGDAL.ico</Link>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
