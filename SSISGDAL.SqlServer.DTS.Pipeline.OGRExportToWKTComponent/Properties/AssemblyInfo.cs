@@ -8,7 +8,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("SSISGDAL.SqlServer.DTS.Pipeline.OGRExportToWKTComponent")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Joel Brown")]
+[assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("SSISGDAL.SqlServer.DTS.Pipeline.OGRExportToWKTComponent")]
 [assembly: AssemblyCopyright("Copyright ©  2012")]
 [assembly: AssemblyTrademark("")]

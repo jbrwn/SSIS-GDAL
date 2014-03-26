@@ -8,7 +8,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("SSISGDAL.SqlServer.DTS.Pipeline.OGRSourceAdapter")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Joel Brown")]
+[assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("SSISGDAL.SqlServer.DTS.Pipeline.OGRSourceAdapter")]
 [assembly: AssemblyCopyright("Copyright © Joel Brown 2012")]
 [assembly: AssemblyTrademark("")]
