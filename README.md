@@ -16,12 +16,15 @@ Build
 -----
 
 Before building you must create a strong-name key file to sign your assemblies:
-    sn.exe -k SSISGDAL.snk
+
+	sn.exe -k SSISGDAL.snk
     
-Build
+Build:
+
     msbuild.exe build.targets /t:build
     
-install
+Install:
+
     msbuild.exe build.targets /t:install
     
 If you have issues check build.targets and make sure the properties are set correctly for your environment  
