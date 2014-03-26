@@ -40,7 +40,7 @@
                         ;OutputPath=$(OutputPath)" />
   </Target>
 
-  <Target Name="Deploy">
+  <Target Name="Install">
     <!--GAC all DLLs-->
     <Exec Command='"$(GACUtilPath)\Gacutil.exe" /if "%(GDALBindings.Identity)"' />
     <Exec Command='"$(GACUtilPath)\Gacutil.exe" /if "%(CoreBinary.Identity)"' />
@@ -54,6 +54,16 @@
     <!--Copy Connection DLLs-->
     <Copy SourceFiles="@(ConnectionBinaries)"
           DestinationFolder="$(SQLDTSPath)\Connections" />
+  </Target>
+
+  <Target Name="Uninstall">
+    <Exec Command='"$(GACUtilPath)\Gacutil.exe" /u "%(GDALBindings.Filename)"' />
+    <Exec Command='"$(GACUtilPath)\Gacutil.exe" /u "%(CoreBinary.Filename)"' />
+    <Exec Command='"$(GACUtilPath)\Gacutil.exe" /u "%(PipelineBinaries.Filename)"' />
+    <Exec Command='"$(GACUtilPath)\Gacutil.exe" /u "%(ConnectionBinaries.Filename)"' />
+
+    <Delete Files="$(SQLDTSPath)\PipelineComponents\%(PipelineBinaries.Filename)%(PipelineBinaries.Extension)" />
+    <Delete Files="$(SQLDTSPath)\Connections\%(ConnectionBinaries.Filename)%(ConnectionBinaries.Extension)"/>
   </Target>
 
 </Project>
