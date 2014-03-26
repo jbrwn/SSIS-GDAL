@@ -7,9 +7,9 @@ GDAL components for SQL Server Ingetration Services
 Requirements
 ------------
 
-Visual Studio 2012
-SQL Server Data Tools
-GDAL >= 1.9
+* Visual Studio 2012
+* SQL Server Data Tools
+* GDAL >= 1.9
 
 
 Build
