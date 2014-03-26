@@ -87,11 +87,6 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\SSISGDAL.snk">
-      <Link>SSISGDAL.snk</Link>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
     <EmbeddedResource Include="..\SSISGDAL.ico">
       <Link>SSISGDAL.ico</Link>
     </EmbeddedResource>

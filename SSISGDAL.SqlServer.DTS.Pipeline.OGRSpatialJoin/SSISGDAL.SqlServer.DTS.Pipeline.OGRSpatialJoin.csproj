@@ -81,11 +81,6 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\SSISGDAL.snk">
-      <Link>SSISGDAL.snk</Link>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\SSISGDAL.SqlServer.DTS.SSISGDAL\SSISGDAL.SqlServer.DTS.SSISGDAL.csproj">
       <Project>{7bdbe2e9-e816-4297-a276-be2a9a99044b}</Project>
       <Name>SSISGDAL.SqlServer.DTS.SSISGDAL</Name>
