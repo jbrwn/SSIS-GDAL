@@ -3,6 +3,8 @@ SSIS-GDAL
 
 GDAL components for SQL Server Ingetration Services
 
+![alt tag](http://download-codeplex.sec.s-msft.com/Download?ProjectName=GDALSSIS&DownloadId=602441)
+
 
 Requirements
 ------------
